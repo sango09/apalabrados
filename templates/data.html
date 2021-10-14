@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block container %}
+    <h1 class="text-center">Numbers</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Number</th>
+            <th scope="col">Accumulated</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for number in numbers %}
+            <tr>
+
+                <th scope="row">{{ number.id }}</th>
+                <td>{{ number.number }}</td>
+                <td>{{ number.accumulated }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h1 class="text-center">Texts</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">text</th>
+            <th scope="col">initial character</th>
+            <th scope="col">last character</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for text in texts %}
+            <tr>
+                <th scope="row">{{ text.id }}</th>
+                <td>{{ text.text }}</td>
+                <td>{{ text.initial }}</td>
+                <td>{{ text.final }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        <h1 class="text-center">Special Characters</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">special character</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for character in characters %}
+            <tr>
+                <th scope="row">{{ character.id }}</th>
+                <td>{{ character.character }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

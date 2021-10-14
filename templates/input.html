@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block container %}
+    <form action="{% url 'index' %}" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="input_text" class="form-label">Text</label>
+            <input type="text" class="form-control" id="input_text" name="input_text">
+            <div id="emailHelp" class="form-text">We'll analyze the input text :D.</div>
+        </div>
+        <button class="btn btn-success w-100" type="submit">Send text!</button>
+    </form>
+
+{% endblock %}
