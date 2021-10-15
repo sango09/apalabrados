@@ -14,5 +14,8 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## Flowchart
+![](https://raw.githubusercontent.com/sango09/apalabrados/04790148e790e73ff2f4679c0094ad09c1607ce4/apalabrados.svg)
+
 ## Deploy in Heroku
 [https://apalabradosdjango.herokuapp.com](https://apalabradosdjango.herokuapp.com)
